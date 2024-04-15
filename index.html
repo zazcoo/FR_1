@@ -22,7 +22,7 @@ body, html {
   position: relative; /* Ensure the pseudo-element positions correctly */
   background-position: center;
   background-size: cover;
-  background-image: url("/images/backgroundFace.jpg");
+  background-image: url("images/backgroundFace.jpg");
   min-height: 100%;
 }
 
@@ -138,7 +138,7 @@ body, html {
     <p class="w3-large w3-center">To speed up the processing of faces, we needed to parallelize the processing by offloading work from RASPI to the FPGA, compute, then return it back to RASPI. We set up a master/slave implementation using the SPI protocol with a custom IP. We serialize the data from the raspi for known_faces encodings and each face_encoding found in the image into a byte stream. Since each encoding is an ndarray of floating-point numbers, we serialized each number into bytes. The face_recognition library produces encodings as 128-dimensional floats, so we send 128 * 8 bytes for each face encoding for a 64-bit floating point. For each face found, we send its encoding to the FPGA and receive the processed result. The FPGA returns a simple byte stream indicating the index of the matching face or if none was recognized.</p>
   </div>
   <div class="w3-col m6">
-    <img class="w3-image w3-round-large" src="/images/RA1.jpg" alt="Buildings"  width="700" height="394">
+    <img class="w3-image w3-round-large" src="images/RA1.jpg" alt="Buildings"  width="700" height="394">
   </div>
 </div>
 </div>
@@ -148,7 +148,7 @@ body, html {
     <p class="w3-large w3-center">The FPGA calculates the Euclidean distance between the two given vectors. The distance d between two vectors x and y can be calculated as...</p>
   </div>
   <div class="w3-col m6">
-    <img class="w3-image w3-round-large" src="/images/RA2.jpg" alt="Buildings"  width="700" height="394">
+    <img class="w3-image w3-round-large" src="images/RA2.jpg" alt="Buildings"  width="700" height="394">
   </div>
 </div>
 
@@ -157,7 +157,7 @@ body, html {
     <p class="w3-large w3-center">where n is the number of dimensions of the vectors. The distance will then be compared to a threshold to decide whether the faces match or not. The FPGA will then send the result back to the Raspberry Pi.</p>
   </div>
   <div class="w3-col m6">
-    <img class="w3-image w3-round-large" src="/images/RA3.jpg" alt="Buildings"  width="700" height="394">
+    <img class="w3-image w3-round-large" src="images/RA3.jpg" alt="Buildings"  width="700" height="394">
   </div>
 </div>
 
@@ -174,7 +174,7 @@ body, html {
 <div class="w3-row-padding w3-center">
 
    <div class="w3-col m6">
-    <img class="w3-image w3-round-large" src="/images/PW1.jpg" alt="Buildings"  width="700" height="394">
+    <img class="w3-image w3-round-large" src="images/PW1.jpg" alt="Buildings"  width="700" height="394">
   </div>
 
   <div class="w3-col m6">
@@ -206,8 +206,8 @@ body, html {
 
     </div>
     <div class="w3-col m6">
-      <img class="w3-image w3-round-large" src="/images/Proto1.jpg" alt="Buildings" width="700" height="394">
-            <img class="w3-padding-16 w3-image w3-round-large " src="/images/Proto2.jpg" alt="Buildings" width="700" height="394">
+      <img class="w3-image w3-round-large" src="images/Proto1.jpg" alt="Buildings" width="700" height="394">
+            <img class="w3-padding-16 w3-image w3-round-large " src="images/Proto2.jpg" alt="Buildings" width="700" height="394">
 
     </div>
   </div>
@@ -222,7 +222,7 @@ body, html {
 
     <div class="w3-col l3 m6 w3-margin-bottom" style="display: flex; flex-direction: column;">
       <div class="w3-card" style="display: flex; flex-direction: column; height: 100%;">
-        <img src="/images/team1.jpg" alt="Ronny N. Ismael" style="width:100%; height: 600px; object-fit: cover;">
+        <img src="images/team1.jpg" alt="Ronny N. Ismael" style="width:100%; height: 600px; object-fit: cover;">
         <div class="w3-container" style="flex: 1;">
           <h3>Ronny N. Ismael</h3>
           <p class="w3-opacity">B.S. Computer Engineer</p>
@@ -234,7 +234,7 @@ body, html {
 
     <div class="w3-col l3 m6 w3-margin-bottom" style="display: flex; flex-direction: column;">
       <div class="w3-card" style="display: flex; flex-direction: column; height: 100%;">
-        <img src="/images/team2.jpg" alt="Cary Zheng" style="width:100%; height: 600px; object-fit: cover;">
+        <img src="images/team2.jpg" alt="Cary Zheng" style="width:100%; height: 600px; object-fit: cover;">
         <div class="w3-container" style="flex: 1;">
           <h3>Cary Zheng</h3>
           <p class="w3-opacity">B.S. Computer Engineer</p>
@@ -246,7 +246,7 @@ body, html {
 
     <div class="w3-col l3 m6 w3-margin-bottom" style="display: flex; flex-direction: column;">
       <div class="w3-card" style="display: flex; flex-direction: column; height: 100%;">
-        <img src="/images/team3.jpg" alt="Michael Zabaneh" style="width:100%; height: 600px; object-fit: cover;">
+        <img src="images/team3.jpg" alt="Michael Zabaneh" style="width:100%; height: 600px; object-fit: cover;">
         <div class="w3-container" style="flex: 1;">
           <h3>Michael Zabaneh</h3>
           <p class="w3-opacity">B.S. Computer Engineer</p>
@@ -258,7 +258,7 @@ body, html {
 
     <div class="w3-col l3 m6 w3-margin-bottom" style="display: flex; flex-direction: column;">
       <div class="w3-card" style="display: flex; flex-direction: column; height: 100%;">
-        <img src="/images/team4.jpg" alt="Mohammad Zaza" style="width:100%; height: 600px; object-fit: cover;">
+        <img src="images/team4.jpg" alt="Mohammad Zaza" style="width:100%; height: 600px; object-fit: cover;">
         <div class="w3-container" style="flex: 1;">
           <h3>Mohammad Zaza</h3>
           <p class="w3-opacity">B.S. Software Engineer</p>
